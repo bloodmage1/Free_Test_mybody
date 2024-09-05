@@ -1,0 +1,68 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" type='text/css' href="{% static 'css/reset.css' %}">
+    <link rel="stylesheet" type='text/css' href="{% static 'css/index.css' %}">
+</head>
+
+<body>
+    {% include 'base/base_head.html' %}
+    <main>
+        <header>
+            <h1>무료 체질 테스트</h1>
+            <h2>My Body's Constitutions Test</h2>
+        </header>
+        <div class="background">
+            <div class="box">
+                <img src="{% static 'img/question.png' %}" alt="질문">
+                <div class="des">
+                    자신의 체질유형을 확인할 수 있도록 솔직하게 답변해주세요
+                </div>
+            </div>
+            <div class="box">
+                <img src="{% static 'img/food.png' %}" alt="음식">
+                <div class="des">
+                    자신의 체질 유형으로 건강한 체질식단을 꾸려보세요
+                </div>
+            </div>
+            <div class="box">
+                <img src="{% static 'img/management.png' %}" alt="관리">
+                <div class="des">
+                    관리와 공부로 자신의 건강을 챙기세요
+                </div>
+
+            </div>
+        </div>
+        <section class="tips">
+            <div class='wave -one'></div>
+            <div class='wave -two'></div>
+            <div class='wave -three'></div>
+        </section>
+    </main>
+    <div class="intro">
+        <h1>나의 8체질은?!</h1>
+        <div class="type">
+            <ul class="type_list">
+                <li>간(肝)이 강하고 폐(肺)가 약한 체질, 목양 체질 木</li>
+                <li>담낭(膽囊)이 강하고 대장(大腸)이 약한 체질, 목음 체질 木</li>
+                <li>비(脾, 췌장)가 강하고 신(腎, 신장)이 약한 체질, 토양 체질 土</li>
+                <li>위(胃)가 강하고 방광(膀胱)이 약한 체질, 토음 체질 土</li>
+                <li>폐(肺)가 강하고 간(肝)이 약한 체질, 금양 체질 金</li>
+                <li>대장(大腸)이 강하고 담낭(膽囊)이 약한 체질, 금음 체질 金</li>
+                <li>신장(腎)이 강하고 췌장(脾)이 약한 체질, 수양 체질 水</li>
+                <li>방광(膀胱)이 강하고 위(胃)가 약한 체질, 수음 체질 水</li>
+            </ul>
+        </div>
+    </div>
+    <div class="button">
+        <a href="{% url 'survey' %}">
+            <button class="start" type="button">시작하기</button>
+        </a>
+    </div>
+    {% include 'base/footer.html' %}
+</body>
+</html>

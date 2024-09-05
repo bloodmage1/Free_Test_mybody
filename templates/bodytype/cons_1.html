@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" type='text/css' href="../css/reset.css">
+    <style>
+
+        @font-face {
+            font-family: 'Nanumfont';
+            src: url('../img/font/NanumGothic.otf') format('opentype');
+        }
+        @font-face {
+            font-family: 'Nanumbfont';
+            src: url('../img/font/NanumGothicBold.otf') format('opentype');
+        }
+        body {
+            background: rgb(215, 233, 201);
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .logo {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #f8f8f8;
+            padding: 10px 20px;
+        }
+        .logo_image {
+            width: 64px;
+            height: 64px;
+        }
+
+        .navbar_logo {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            justify-content: space-between; 
+        }
+
+        .navbar_logo ul {
+            display: flex;
+            justify-content: center; 
+            /* align-items: center;  */
+            flex-grow: 1; 
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar_logo img {
+            margin-right: 20px;
+        }
+
+
+        .navbar_logo ul li {
+            margin: 0 15px;
+        }
+
+        .navbar_logo ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .right_section a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .right_section a span {
+            padding: 10px;
+            border: 1px solid #333;
+            border-radius: 5px;
+            display: inline-block;
+            white-space: nowrap;
+        }
+
+
+
+        main {
+            background-color: green;
+            height: 30vh;
+            width: 80%;
+            padding: 30px;
+            display: flex;
+            justify-content: space-between;  /* Ensure equal spacing between left and right boxes */
+            align-items: flex-start; /* Align items to the top initially */
+            border-radius: 5px;
+            box-shadow: 0 2px 30px rgba(0, 0, 0, .2);
+            position: relative;
+            overflow: hidden;
+            margin: 0 auto; 
+            margin-bottom: 50px;
+        }
+
+        .box {
+            width: 45%; 
+            display: flex;
+            position: relative; /* Required for positioning the image inside the box */
+        }
+
+        .left-box {
+            justify-content: flex-start; /* Left-align content in the left box */
+            align-items: flex-start; /* Align the image to the top */
+        }
+
+        .right-box {
+            justify-content: flex-end; /* Right-align content in the right box */
+            align-items: flex-end; /* Align the image to the bottom */
+            margin-top: 18%;
+        }
+
+        .left-box img {
+            position: absolute;
+            top: 0; /* Align the image to the top-left of the box */
+            left: 0;
+            max-width: 100%; /* Ensure the image fits inside the box */
+            height: auto;
+        }
+
+        .right-box img {
+            position: absolute;
+            bottom: 0; /* Align the image to the bottom-right of the box */
+            right: 0;
+            max-width: 100%; /* Ensure the image fits inside the box */
+            height: auto;
+            
+        }
+
+        .left-box img, .right-box img {
+            max-width: 50%; /* Image takes up 50% of the box width */
+            height: auto;
+        }
+        .left-box span, .right-box span {
+            margin-left: 10px; 
+            font-size: 1.5em; 
+            color: white;
+        }
+
+
+        main h1 {
+            color: white;
+            text-align: center;
+            font-size: 3.5em;
+            margin-bottom: 40px;
+            margin-top: 20px;
+            font-family: 'Nanumbfont';
+        }
+
+        main h2 {
+            color: white;
+            text-align: center;
+            font-size: 1em;
+            margin-bottom: 40px;
+            font-family: 'Nanumfont';
+        }
+
+
+        .jh{
+            display: flex;
+            justify-content: center;
+            padding-bottom: 50px;
+        }
+
+        .jh a{
+            width: 100px;
+        }
+
+        .jh img{
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="logo" v-until:nav-logo="true">
+        <nav class="navbar_logo" v-until:nav-middle>
+            <img src="../img/logo.gif" alt="음양오행logo" class="logo_image">8 Constitutions
+            <ul class="active">
+                <li>
+                    <a href="">체질 유형 검사</a>
+                </li>
+                <li>
+                    <a href="">체질 유형</a>
+                </li>
+                <li>
+                    <a href="">체질의 중요성</a>
+                </li>
+                <li>
+                    <a href="">문의</a>
+                </li>
+            </ul>
+        </nav>
+        
+        <div class="right_section">
+            <a href="">
+                <span>로그인</span>
+            </a>
+        </div>
+    </div>
+    <main>
+        <div class="box left-box">
+            <img src="../img/1_inf/1.webp" alt="Left Box Image">
+            <!-- <span>옥주현</span> -->
+        </div>
+        <div class="box right-box">
+            <!-- <span>홍금보</span> -->
+            <img src="../img/1_inf/2.webp" alt="Right Box Image">
+            
+        </div>
+
+    </main>
+
+
+    <div class="jh">
+        <h3>제작자</h3>
+            <a href="https://velog.io/@workhard/8%EC%B2%B4%EC%A7%88-%ED%8C%8C%EC%95%85-%EC%A7%88%EB%AC%B8-%EB%A6%AC%EC%8A%A4%ED%8A%B8">
+                <img src="../img/jam.png" alt="jh"> 
+            </a>
+    </div>
+</body>
+</html>

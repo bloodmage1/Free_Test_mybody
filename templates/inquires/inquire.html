@@ -1,0 +1,34 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" type='text/css' href="{% static 'css/reset.css' %}">
+    <link rel="stylesheet" type='text/css' href="{% static 'css/inquire.css' %}">
+</head>
+<body>
+    {% include 'base/base_head.html' %}
+    <main>
+        <header>
+            <h1>문의</h1>
+            <h2>질문, 의견 또는 건의사항이 있으신 경우 언제든 연락해 주십시오. </h2>
+            <h2>8체질에 관련된 모든 문의 이메일을 주의 깊게 확인하고 피드백 하겠습니다.</h2>
+            <h4>breakprejudice@naver.com</h4>     
+        </header>
+        <div class="position">
+            <h2>8체질 분석한 곳</h2>
+            <h3>충남대, 대전 유성구 대학로 99</h3>
+            <h3>Registered in Korea</h3>
+        </div>
+
+        <section class="tips">
+            <div class='wave -one'></div>
+            <div class='wave -two'></div>
+            <div class='wave -three'></div>
+        </section>
+    </main>
+    {% include 'base/footer.html' %}
+</body>
+</html>

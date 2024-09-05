@@ -1,0 +1,26 @@
+{% load static %}
+<div class="logo" v-until:nav-logo="true">
+    <nav class="navbar_logo" v-until:nav-middle>
+        <img src="{% static 'img/logo.gif' %}" alt="음양오행logo" class="logo_image">8 Constitutions
+        <ul class="active">
+            <li>
+                <a href="{% url 'index' %}">체질 유형 검사</a>
+            </li>
+            <li>
+                <a href="{% url 'bodytype' %}">체질 유형</a>
+            </li>
+            <li>
+                <a href="">체질의 중요성</a>
+            </li>
+            <li>
+                <a href="{% url 'inquires' %}">문의</a>
+            </li>
+        </ul>
+    </nav>
+    
+    <div class="right_section">
+        <a href="">
+            <span>로그인</span>
+        </a>
+    </div>
+</div>

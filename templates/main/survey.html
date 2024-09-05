@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>나의 8체질 찾기</title>
+    <link rel="stylesheet" type= 'text/css' href="css/reset.css">
+    <style>
+        @font-face {
+            font-family: 'Nanumfont';
+            src: url('../img/font/NanumGothic.otf') format('opentype');
+        }
+        @font-face {
+            font-family: 'Nanumbfont';
+            src: url('../img/font/NanumGothicBold.otf') format('opentype');
+        }
+
+        body, h1, h2, header p, main p, fieldset{
+            margin: initial;
+        }
+        footer button {
+            padding: initial;
+            border: 0;
+        }
+        h1, h2 {
+            
+            font-size: inherit;
+            margin-bottom: 10px;
+        }
+        /* 초기화 */
+        body {
+            background-color: #5f635f;
+        }
+        legend {
+            font-size: 20px;
+            font-weight: bold;
+        }
+        fieldset {
+            font-family: 'Nanumfont';
+            border: 0;
+        }
+        .wrapper {
+            background-color: #baecc1;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+        header, main, footer {
+            padding: 35px;
+        }
+        .header {
+            font-family: 'Nanumbfont';
+            padding-bottom: 0px;
+            border-top: 30px solid #26b10a ;
+        }
+        header h1 {
+            font-size: 40px;
+        }
+        h2 {
+            
+            font-size: 20px;
+            color: #203239;
+            margin-bottom: 15px;
+        }
+        main fieldset {
+            background-color: white;
+            margin: 30px 0;
+            padding: 15px;
+            border: 2px solid #141E27;
+            border-radius: 10px;
+        }
+        main {
+            padding-top: 0;
+        }
+        legend {
+
+            display: none;
+        }
+        main label {
+            display: block;
+        }
+        main input {
+            margin: 5px 10px;
+            margin-left: 0;
+        }
+        section {
+            padding: 20px;
+        }
+        .txt_input input, textarea {
+            padding: 10px;
+            border-radius: 3px;
+        }
+        .txt_input textarea {
+            width: 470px;
+        }
+        .txt_input input {
+            width: 300px;
+        }
+        .wrapper {
+            width: 600px;
+            margin: 100px auto;
+        }
+        .wrapper footer {
+            padding-top: 0;
+        }
+        footer button {
+            margin: 0 15px;
+        }
+        footer .submit_btn {
+            width: 70px;
+            border-radius: 7px;
+            background-color: #26b10a;
+            color: #EEEDDE;
+            padding: 10px;
+        }
+        footer .reset_btn {
+            background-color: inherit;
+            color: #1c1d1c;
+            display: inline-block;
+            /* float: right; */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="wrapper">
+        <header class="header">
+            <h1>나의 체질은?</h1>
+            <p>
+                지금부터 검사를 시작합니다.
+                <br>
+                고민하고 솔직하게 대답해주세요.
+            </p>
+        </header>
+        <form action method="get">
+            <main class="main">
+<!--  1111111111111111111111111111111111111111111111111111111111111111111 -->
+                <fieldset>
+                    <legend>체형 조사</legend>
+                    <h2>당신의 체형은 어떠합니까?(운동하는 사람이라면 운동하기 전)</h2>
+                    <label>
+                        <input type="radio" class="type" name="qone" value="토음, 금음">
+                        작고 뚱뚱함
+                    </label>
+                    <label>
+                        <input type="radio" class="type" name="qone" value="목음, 수음">
+                        날씬함
+                    </label>
+                    <label>
+                        <input type="radio" class="type" name="qone" value="수양, 목양">
+                        근육질임
+                    </label>
+                    <label>
+                        <input type="radio" class="type" name="qone" value="금양, 토양">
+                        평균적임
+                    </label>                    
+                </fieldset>
+<!--  2222222222222222222222222222222222222222222222222222222222222222222 -->
+                <fieldset>
+                    <legend>체형 조사</legend>
+                    <h2>당신은 쉽게 살이 찌거나 빠지는 경향이 있습니까?</h2>
+                    <label>
+                        <input type="radio" class="type" name="qtwo" value="토음, 금음, 목음, 수음">
+                        쉽게 찌거나 빠지는 경향이 있음
+                    </label>
+                    <label>
+                        <input type="radio" class="type" name="qtwo" value="수양, 목양, 금양, 토양">
+                        크게 변동 없음
+                    </label>                
+                </fieldset>
+<!--  33333333333333333333333333333333333333333333333333333333333333333 -->
+                <fieldset>
+                    <legend>외모 조사</legend>
+                    <h2>당신의 얼굴 특징은 날카롭고 뚜렷합니까, 아니면 부드럽고 둥글습니까?</h2>
+                    <label>
+                        <input type="radio" class="type" name="qthree" value="수양, 금양">
+                        날카롭고 뚜렷한 인상
+                    </label>
+                    <label>
+                        <input type="radio" class="type" name="qthree" value="토음, 금음">
+                        부드럽고 둥근 인상
+                    </label>  
+                    <label>
+                        <input type="radio" class="type" name="qthree" value="토양,목양">
+                        넓적한 인상
+                    </label>
+                    <label>
+                        <input type="radio" class="type" name="qthree" value="목음, 수음">
+                        전체적으로 모인 인상
+                    </label>                 
+                </fieldset>
+<!--  4444444444444444444444444444444444444444444444444444444444444444444 -->
+                <fieldset>
+                    <legend>외모 조사</legend>
+                    <h2>얼굴이 갸름한가요, 사각턱을 가지고 있나요?</h2>
+                    <label>
+                        <input type="radio" class="type" name="qfour" value="목음, 수음, 금음">
+                        갸름한 얼굴
+                    </label>
+                    <label>
+                        <input type="radio" class="type" name="qfour" value="토음, 토양, 목양">
+                        사각턱
+                    </label>  
+                    <label>
+                        <input type="radio" class="type" name="qfour" value="금양, 수양">
+                        보통
+                    </label>
+              
+                </fieldset>
+<!--  555555555555555555555555555555555555555555555555555555555555555555 -->
+                <fieldset>
+                    <legend>피부 조사</legend>
+                    <h2>당신의 피부는 전반적으로 건성, 지성, 밸런스가 맞는 편인가요?</h2>
+                    <label>
+                        <input type="radio" class="type" name="qfive" value="수음, 목음">
+                        건성
+                    </label>
+                    <label>
+                        <input type="radio" class="type" name="qfive" value="토음, 금음">
+                        지성
+                    </label>  
+                    <label>
+                        <input type="radio" class="type" name="qfive" value="금양, 목양, 수양, 토양">
+                        균형
+                    </label>
+               
+                </fieldset>
+<!--  66666666666666666666666666666666666666666666666666666666666666666666 -->
+                <fieldset>
+                    <legend>피부 조사</legend>
+                    <h2>발진이나 여드름과 같은 피부 질환이 자주 발생합니까?</h2>
+                    <label>
+                        <input type="radio" class="type" name="qsix" value="금음, 토음, 수양">
+                        피부 질환이 쉽게 생겼었음
+                    </label>
+                    <label>
+                        <input type="radio" class="type" name="qsix" value="목양, 목음">
+                        보통이다
+                    </label>  
+                    <label>
+                        <input type="radio" class="type" name="qsix" value="수음, 금양, 토양">
+                        피부 질환이 생긴적이 드뭄
+                    </label>
+          
+                </fieldset>
+<!--  7777777777777777777777777777777777777777777777777777777777777777777 -->
+                <fieldset>
+                    <legend>머리 조사</legend>
+                    <h2>당신의 모발의 상태는 어떠한가요?</h2>
+                    <label>
+                        <input type="radio" class="type" name="qseven" value="토음, 수양, 목양">
+                        굵은 모발
+                    </label>
+                    <label>
+                        <input type="radio" class="type" name="qseven" value="목음, 수음">
+                        얇은 모발
+                    </label>  
+                    <label>
+                        <input type="radio" class="type" name="qseven" value="금양">
+                        지성 모발
+                    </label>
+                    <label>
+                        <input type="radio" class="type" name="qseven" value="금음, 토양">
+                        건성 모발
+                    </label>                 
+                </fieldset>
+<!--  88888888888888888888888888888888888888888888888888888888888888888888 -->
+                <fieldset>
+                    <legend>소화기 조사</legend>
+                    <h2>식욕이 강하거나 약합니까?</h2>
+                    <label>
+                        <input type="radio" class="type" name="qeight" value="토음, 금음, 수양">
+                        식욕이 강하다
+                    </label>
+                    <label>
+                        <input type="radio" class="type" name="qeight" value="목양, 금양, 토양">
+                        보통
+                    </label>  
+                    <label>
+                        <input type="radio" class="type" name="qeight" value="목음, 수음">
+                        식욕이 약하다
+                    </label>
+               
+                </fieldset>
+<!--  999999999999999999999999999999999999999999999999999999999999999999999 -->
+                <fieldset>
+                    <legend>소화기 조사</legend>
+                    <h2>소화불량, 복부팽만감, 가스가 자주 발생합니까?</h2>
+                    <label>
+                        <input type="radio" class="type" name="qnine" value="목음, 수음, 금음">
+                        자주 발생한다
+                    </label>
+                    <label>
+                        <input type="radio" class="type" name="qnine" value="토음, 토양, 목양">
+                        보통
+                    </label>  
+                    <label>
+                        <input type="radio" class="type" name="qnine" value="수양, 금양">
+                        아니다
+                    </label>
+              
+                </fieldset>
+<!--  000000000000000000000000000000000000000000000000000000000000000000000 -->
+                <fieldset>
+                    <legend>소화기 조사</legend>
+                    <h2>배변이 규칙적입니까, 아니면 변비나 설사를 자주 합니까?</h2>
+                    <label>
+                        <input type="radio" class="type" name="qten" value="목음, 수음, 금음, 토음">
+                        배변이 불규칙하고 자주 변비나 설사를 함
+                    </label>
+                    <label>
+                        <input type="radio" class="type" name="qten" value="토양, 목양">
+                        보통
+                    </label>  
+                    <label>
+                        <input type="radio" class="type" name="qten" value="수양, 금양">
+                        규칙적이고 변비나 설사를 잘 하지 않음
+                    </label>
+       
+                </fieldset>
+<!--  111111111111111111111111111111111111111111111111111111111111111111111111 -->
+                <fieldset>
+                    <legend>순환기 조사</legend>
+                    <h2>당신은 다른 사람보다 온도에 민감한가요?</h2>
+                    <label>
+                        <input type="radio" class="type" name="qeleven" value="수양, 목양">
+                        다른 이들보다 더운 것을 많이 느낌
+                    </label>
+                    <label>
+                        <input type="radio" class="type" name="qeleven" value="목음, 수음">
+                        다른 이들보다 추운 것을 많이 느낌
+                    </label>  
+                    <label>
+                        <input type="radio" class="type" name="qeleven" value="금양, 토음, 금음, 토양">
+                        보통
+                    </label>
+               
+                </fieldset>
+<!--  222222222222222222222222222222222222222222222222222222222222222222222222 -->
+                <fieldset>
+                    <legend>순환기 조사</legend>
+                    <h2>땀을 쉽게 흘리거나 많이 흘리시나요?</h2>
+                    <label>
+                        <input type="radio" class="type" name="qtwelve" value="수양, 토음, 목양">
+                        땀을 많이 흘림
+                    </label>
+                    <label>
+                        <input type="radio" class="type" name="qtwelve" value="금음, 금양, 토양">
+                        보통
+                    </label>  
+                    <label>
+                        <input type="radio" class="type" name="qtwelve" value="목음, 수음">
+                        땀을 적게 흘림
+                    </label>
+               
+                </fieldset>
+<!--  33333333333333333333333333333333333333333333333333333333333333333333333333 -->
+                <fieldset>
+                    <legend>성향 조사</legend>
+                    <h2>당신은 내성적인 편인가요, 외향적인 편인가요?</h2>
+                    <label>
+                        <input type="radio" class="type" name="qthirteen" value="목음, 수음, 금음">
+                        내성적인 편
+                    </label>
+                    <label>
+                        <input type="radio" class="type" name="qthirteen" value="토음, 토양, 금양">
+                        보통
+                    </label>  
+                    <label>
+                        <input type="radio" class="type" name="qthirteen" value="수양, 목양">
+                        외향적인 편
+                    </label>
+            
+                </fieldset>
+<!--  4444444444444444444444444444444444444444444444444444444444444444444444444 -->
+                <fieldset>
+                    <legend>성향 조사</legend>
+                    <h2>집중하고 기억하는 것이 쉽다고 생각합니까, 아니면 집중력과 기억력에 어려움을 겪고 있습니까?</h2>
+                    <label>
+                        <input type="radio" class="type" name="qfourteen" value="금양, 목양, 수양">
+                        쉬움
+                    </label>
+                    <label>
+                        <input type="radio" class="type" name="qfourteen" value="토음, 토양, 금음">
+                        보통
+                    </label>  
+                    <label>
+                        <input type="radio" class="type" name="qfourteen" value="목음, 수음">
+                        어려움
+                    </label>
+               
+                </fieldset>
+<!--  55555555555555555555555555555555555555555555555555555555555555555555555555 -->
+                <fieldset>
+                    <legend>성향 조사</legend>
+                    <h2>보통 몇 시간 정도 자고 일어나면 개운한 기분이 드나요?</h2>
+                    <label>
+                        <input type="radio" class="type" name="qfifteen" value="목음, 수음, 토음">
+                        8~10시간
+                    </label>
+                    <label>
+                        <input type="radio" class="type" name="qfifteen" value="금음, 토양, 목양">
+                        7~8시간
+                    </label>  
+                    <label>
+                        <input type="radio" class="type" name="qfifteen" value="수양, 금양">
+                        7시간 이하
+                    </label>
+               
+                </fieldset>
+<!--  6666666666666666666666666666666666666666666666666666666666666666666666666666 -->
+                <fieldset>
+                    <legend>성향 조사</legend>
+                    <h2>당신은 신체 활동과 운동을 선호합니까, 아니면 피합니까?</h2>
+                    <label>
+                        <input type="radio" class="type" name="qsixteen" value="수양, 목양">
+                        신체활동을 좋아함
+                    </label>
+                    <label>
+                        <input type="radio" class="type" name="qsixteen" value="금양, 토음, 토양">
+                        보통
+                    </label>  
+                    <label>
+                        <input type="radio" class="type" name="qsixteen" value="금음, 목음, 수음">
+                        신체활동을 싫어함
+                    </label>
+                
+                </fieldset>
+<!--  7777777777777777777777777777777777777777777777777777777777777777777777777777 -->
+                <fieldset>
+                    <legend>성향 조사</legend>
+                    <h2>귀하는 일반적으로 한약, 침술 또는 기타 치료에 어떻게 반응합니까?</h2>
+                    <label>
+                        <input type="radio" class="type" name="qseventeen" value="목음, 수음, 금음">
+                        효과가 좋음
+                    </label>
+                    <label>
+                        <input type="radio" class="type" name="qseventeen" value="토음, 목양, 토양">
+                        보통
+                    </label>  
+                    <label>
+                        <input type="radio" class="type" name="qseventeen" value="수양, 금양">
+                        효과가 나쁨
+                    </label>
+      
+                </fieldset>
+<!--  88888888888888888888888888888888888888888888888888888888888888888888888888888 -->
+                <fieldset>
+                    <legend>성향 조사</legend>
+                    <h2>당신은 뜨겁거나 차가운 음식과 음료를 선호합니까?</h2>
+                    <label>
+                        <input type="radio" class="type" name="qeighteen" value="목음, 금음">
+                        뜨거운 음식과 음료를 선호
+                    </label>
+                    <label>
+                        <input type="radio" class="type" name="qeighteen" value="금음, 금양, 토음, 토양">
+                        보통
+                    </label>  
+                    <label>
+                        <input type="radio" class="type" name="qeighteen" value="수양, 목양">
+                        찬 음식과 음료를 선호
+                    </label>
+               
+                </fieldset>
+<!--  9999999999999999999999999999999999999999999999999999999999999999999999999999 -->
+                <fieldset>
+                    <legend>성향 조사?</legend>
+                    <h2>당신은 단맛, 짠 음식, 매운 음식, 쓴 음식을 좋아하는 경향이 있습니까?</h2>
+                    <label>
+                        <input type="radio" class="type" name="qnineteen" value="토음, 토양">
+                        단 음식을 선호함
+                    </label>
+                    <label>
+                        <input type="radio" class="type" name="qnineteen" value="목음, 수음">
+                        짠 음식을 선호함
+                    </label>  
+                    <label>
+                        <input type="radio" class="type" name="qnineteen" value="수양, 목양">
+                        매운 음식을 선호함
+                    </label>
+                    <label>
+                        <input type="radio" class="type" name="qnineteen" value="금양, 금음">
+                        쓴 음식을 선호함
+                    </label>                 
+                </fieldset>
+
+
+
+            </main>
+            <footer>
+                <button class="submit_btn">제출</button>
+                <button class="reset_btn" type="reset">양식 지우기</button>
+            </footer>
+        </form>
+    </div>
+
+    <script
+  src="https://code.jquery.com/jquery-3.7.1.js">
+    function calculateScore() {
+        const qone = document.querySelector('input[name="qone"]:checked');
+        const qtwo = document.querySelector('input[name="qtwo"]:checked');
+        const qthree = document.querySelector('input[name="qthree"]:checked');
+        const qfour = document.querySelector('input[name="qfour"]:checked');
+        const qfive = document.querySelector('input[name="qfive"]:checked');
+        const qsix = document.querySelector('input[name="qsix"]:checked');
+        const qseven = document.querySelector('input[name="qseven"]:checked');
+        const qeight = document.querySelector('input[name="qeight"]:checked');
+        const qnine = document.querySelector('input[name="qnine"]:checked');
+        const qten = document.querySelector('input[name="qten"]:checked');
+        const qeleven = document.querySelector('input[name="qeleven"]:checked');
+        const qtwelve = document.querySelector('input[name="qtwelve"]:checked');
+        const qthirteen = document.querySelector('input[name="qthirteen"]:checked');
+        const qfourteen = document.querySelector('input[name="qfourteen"]:checked');
+        const qfifteen = document.querySelector('input[name="qfifteen"]:checked');
+        const qsixteen = document.querySelector('input[name="qsixteen"]:checked');
+        const qseventeen = document.querySelector('input[name="qseventeen"]:checked');
+        const qeighteen = document.querySelector('input[name="qeighteen"]:checked');
+        const qnineteen = document.querySelector('input[name="qnineteen"]:checked');
+
+        const constitutionScores = {
+            '목양': 0,
+            '목음': 0,
+            '토양': 0,
+            '토음': 0,
+            '금양': 0,
+            '금음': 0,
+            '수양': 0,
+            '수음': 0,
+        };
+
+        if (qone) {
+            if (qone.value === '토음, 금음') {
+                constitutionScores['토음'] += 3;
+                constitutionScores['금음'] += 3;
+            } else if (qone.value === '목음, 수음') {
+                constitutionScores['목음'] += 3;
+                constitutionScores['수음'] += 3;
+            } else if (qone.value === '수양, 목양') {
+                constitutionScores['수양'] += 3;
+                constitutionScores['목양'] += 3;
+            } else if (qone.value === '금양, 토양') {
+                constitutionScores['금양'] += 2;
+                constitutionScores['토양'] += 2;
+            }
+        }
+
+        if (qtwo) {
+            if (qtwo.value === '토음, 금음, 목음, 수음') {
+                constitutionScores['토음'] += 3;
+                constitutionScores['금음'] += 3;
+                constitutionScores['목음'] += 3;
+                constitutionScores['수음'] += 3;
+            } else if (qtwo.value === '수양, 목양, 금양, 토양') {
+                constitutionScores['수양'] += 2;
+                constitutionScores['목양'] += 2;
+                constitutionScores['금양'] += 2;
+                constitutionScores['토양'] += 2;
+            }
+        }
+
+        if (qthree) {
+            if (qthree.value === '수양, 수양') {
+                constitutionScores['수양'] += 3;
+                constitutionScores['수양'] += 3;
+            } else if (qthree.value === '토음, 금음') {
+                constitutionScores['토음'] += 3;
+                constitutionScores['금음'] += 3;
+            } else if (qthree.value === '토양,목양') {
+                constitutionScores['토양'] += 3;
+                constitutionScores['목양'] += 3;
+            } else if (qthree.value === '목음, 수음') {
+                constitutionScores['목음'] += 2;
+                constitutionScores['수음'] += 2;
+            }
+        }
+
+        if (qfour) {
+            if (qfour.value === '목음, 수음, 금음') {
+                constitutionScores['목음'] += 3;
+                constitutionScores['수음'] += 3;
+                constitutionScores['금음'] += 3;
+            } else if (qfour.value === '토음, 토양, 목양') {
+                constitutionScores['토음'] += 3;
+                constitutionScores['토양'] += 3;
+                constitutionScores['목양'] += 3;
+            } else if (qfour.value === '금양, 수양') {
+                constitutionScores['수양'] += 2;
+                constitutionScores['금양'] += 2;
+            } 
+        }
+
+
+        if (qfive) {
+            if (qfive.value === '수음, 목음') {
+                constitutionScores['수음'] += 3;
+                constitutionScores['목음'] += 3;
+            } else if (qfive.value === '토음, 금음') {
+                constitutionScores['토음'] += 3;
+                constitutionScores['금음'] += 3;
+            } else if (qfive.value === '금양, 목양, 수양, 토양') {
+                constitutionScores['금양'] += 2;
+                constitutionScores['목양'] += 2;
+                constitutionScores['수양'] += 2;
+                constitutionScores['토양'] += 2;
+            } 
+        }
+
+
+        if (qsix) {
+            if (qsix.value === '금음, 토음, 수양') {
+                constitutionScores['수양'] += 3;
+                constitutionScores['금음'] += 3;
+                constitutionScores['토음'] += 3;
+            } else if (qsix.value === '목양, 목음') {
+                constitutionScores['목양'] += 2;
+                constitutionScores['목음'] += 2;
+            } else if (qsix.value === '수음, 금양, 토양') {
+                constitutionScores['수음'] += 1;
+                constitutionScores['금양'] += 1;
+                constitutionScores['토양'] += 1;
+            } 
+        }
+
+
+        if (qseven) {
+            if (qseven.value === '토음, 수양, 목양') {
+                constitutionScores['토음'] += 3;
+                constitutionScores['수양'] += 3;
+                constitutionScores['목양'] += 3;
+            } else if (qseven.value === '목음, 수음') {
+                constitutionScores['목음'] += 3;
+                constitutionScores['수음'] += 3;
+            } else if (qseven.value === '금양') {
+                constitutionScores['금양'] += 3;
+            } else if (qseven.value === '금음, 토양') {
+                constitutionScores['금음'] += 2;
+                constitutionScores['토양'] += 2;
+            }
+        }
+
+
+        if (qeight) {
+            if (qeight.value === '토음, 금음, 수양') {
+                constitutionScores['토음'] += 3;
+                constitutionScores['금음'] += 3;
+                constitutionScores['수양'] += 3;
+            } else if (qeight.value === '목양, 금양, 토양') {
+                constitutionScores['목양'] += 2;
+                constitutionScores['금양'] += 2;
+                constitutionScores['토양'] += 2;
+            } else if (qeight.value === '목음, 수음') {
+                constitutionScores['목음'] += 3;
+                constitutionScores['수음'] += 3;
+            } 
+        }
+
+
+        if (qnine) {
+            if (qnine.value === '목음, 수음, 금음') {
+                constitutionScores['목음'] += 3;
+                constitutionScores['수음'] += 3;
+                constitutionScores['금음'] += 3;
+            } else if (qnine.value === '토음, 토양, 목양') {
+                constitutionScores['토음'] += 2;
+                constitutionScores['토양'] += 2;
+                constitutionScores['목양'] += 2;
+            } else if (qnine.value === '수양, 금양') {
+                constitutionScores['수양'] += 1;
+                constitutionScores['금양'] += 1;
+            } 
+        }
+
+
+        if (qten) {
+            if (qten.value === '목음, 수음, 금음, 토음') {
+                constitutionScores['목음'] += 3;
+                constitutionScores['수음'] += 3;
+                constitutionScores['금음'] += 3;
+                constitutionScores['토음'] += 3;
+            } else if (qten.value === '토양, 목양') {
+                constitutionScores['토양'] += 2;
+                constitutionScores['목양'] += 2;
+            } else if (qten.value === '수양, 금양') {
+                constitutionScores['수양'] += 1;
+                constitutionScores['금양'] += 1;
+            } 
+        }
+
+
+        if (qeleven) {
+            if (qeleven.value === '수양, 목양') {
+                constitutionScores['수양'] += 3;
+                constitutionScores['목양'] += 3;
+            } else if (qeleven.value === '목음, 수음') {
+                constitutionScores['목음'] += 3;
+                constitutionScores['수음'] += 3;
+            } else if (qeleven.value === '금양, 토음, 금음, 토양') {
+                constitutionScores['금양'] += 2;
+                constitutionScores['토음'] += 2;
+                constitutionScores['금음'] += 2;
+                constitutionScores['토양'] += 2;
+            } 
+        }
+
+
+        if (qtwelve) {
+            if (qtwelve.value === '수양, 토음, 목양') {
+                constitutionScores['수양'] += 3;
+                constitutionScores['토음'] += 3;
+                constitutionScores['목양'] += 3;
+            } else if (qtwelve.value === '금음, 금양, 토양') {
+                constitutionScores['금음'] += 2;
+                constitutionScores['금양'] += 2;
+                constitutionScores['토양'] += 2;
+            } else if (qtwelve.value === '목음, 수음') {
+                constitutionScores['목음'] += 3;
+                constitutionScores['수음'] += 3;
+            } 
+        }
+
+
+        if (qthirteen) {
+            if (qthirteen.value === '목음, 수음, 금음') {
+                constitutionScores['목음'] += 3;
+                constitutionScores['수음'] += 3;
+                constitutionScores['금음'] += 3;
+            } else if (qthirteen.value === '토음, 토양, 금양') {
+                constitutionScores['토음'] += 2;
+                constitutionScores['토양'] += 2;
+                constitutionScores['금양'] += 2;
+            } else if (qthirteen.value === '수양, 목양') {
+                constitutionScores['수양'] += 3;
+                constitutionScores['목양'] += 3;
+            } 
+        }
+
+
+        if (qfourteen) {
+            if (qfourteen.value === '금양, 목양, 수양') {
+                constitutionScores['금양'] += 3;
+                constitutionScores['목양'] += 3;
+                constitutionScores['수양'] += 3;
+            } else if (qfourteen.value === '토음, 토양, 금음') {
+                constitutionScores['토음'] += 2;
+                constitutionScores['토양'] += 2;
+                constitutionScores['금음'] += 2;
+            } else if (qfourteen.value === '목음, 수음') {
+                constitutionScores['목음'] += 1;
+                constitutionScores['수음'] += 1;
+            } 
+        }
+
+
+        if (qfifteen) {
+            if (qfifteen.value === '목음, 수음, 토음') {
+                constitutionScores['목음'] += 3;
+                constitutionScores['수음'] += 3;
+                constitutionScores['토음'] += 3;
+            } else if (qfifteen.value === '금음, 토양, 목양') {
+                constitutionScores['금음'] += 2;
+                constitutionScores['토양'] += 2;
+                constitutionScores['목양'] += 2;
+            } else if (qfifteen.value === '수양, 금양') {
+                constitutionScores['수양'] += 1;
+                constitutionScores['금양'] += 1;
+            } 
+        }
+
+
+
+        if (qsixteen) {
+            if (qsixteen.value === '수양, 목양') {
+                constitutionScores['수양'] += 3;
+                constitutionScores['목양'] += 3;
+                
+            } else if (qsixteen.value === '금양, 토음, 토양') {
+                constitutionScores['금양'] += 2;
+                constitutionScores['토음'] += 2;
+                constitutionScores['토양'] += 2;
+            } else if (qsixteen.value === '금음, 목음, 수음') {
+                constitutionScores['금음'] += 1;
+                constitutionScores['목음'] += 1;
+                constitutionScores['수음'] += 1;
+            } 
+        }
+
+
+
+        if (qsixteen) {
+            if (qsixteen.value === '수양, 목양') {
+                constitutionScores['수양'] += 3;
+                constitutionScores['목양'] += 3;
+                
+            } else if (qsixteen.value === '금양, 토음, 토양') {
+                constitutionScores['금양'] += 2;
+                constitutionScores['토음'] += 2;
+                constitutionScores['토양'] += 2;
+            } else if (qsixteen.value === '금음, 목음, 수음') {
+                constitutionScores['금음'] += 1;
+                constitutionScores['목음'] += 1;
+                constitutionScores['수음'] += 1;
+            } 
+        }
+
+
+
+        if (qseventeen) {
+            if (qseventeen.value === '목음, 수음, 금음') {
+                constitutionScores['목음'] += 3;
+                constitutionScores['수음'] += 3;
+                constitutionScores['금음'] += 3;
+            } else if (qseventeen.value === '토음, 목양, 토양') {
+                constitutionScores['토음'] += 2;
+                constitutionScores['토양'] += 2;
+                constitutionScores['목양'] += 2;
+            } else if (qseventeen.value === '수양, 금양') {
+                constitutionScores['수양'] += 1;
+                constitutionScores['금양'] += 1;
+            } 
+        }
+
+
+        if (qeighteen) {
+            if (qeighteen.value === '목음, 금음') {
+                constitutionScores['목음'] += 3;
+                constitutionScores['금음'] += 3;
+                
+            } else if (qeighteen.value === '금음, 금양, 토음, 토양') {
+                constitutionScores['금음'] += 2;
+                constitutionScores['금양'] += 2;
+                constitutionScores['토음'] += 2;
+                constitutionScores['토양'] += 3;
+            } else if (qeighteen.value === '수양, 목양') {
+                constitutionScores['수양'] += 3;
+                constitutionScores['목양'] += 3;
+            } 
+        }
+
+
+        if (qnineteen) {
+            if (qnineteen.value === '토음, 토양') {
+                constitutionScores['토음'] += 3;
+                constitutionScores['토양'] += 3;
+            } else if (qnineteen.value === '목음, 수음') {
+                constitutionScores['목음'] += 3;
+                constitutionScores['수음'] += 3;
+            } else if (qnineteen.value === '수양, 목양') {
+                constitutionScores['수양'] += 3;
+                constitutionScores['목양'] += 3;
+            } else if (qnineteen.value === '금양, 금음') {
+                constitutionScores['금양'] += 3;
+                constitutionScores['금음'] += 3;
+            }
+        }
+
+
+        // Find the constitution with the highest score
+        const highestScore = Object.keys(constitutionScores).reduce((a, b) => constitutionScores[a] > constitutionScores[b] ? a : b);
+
+        alert(`The constitution with the highest score is: ${highestScore}`);
+    }
+
+</script>
+
+
+
+  
+  <script type='text/javascript' src="js/form.js"> </script>
+</body>
+</html>
