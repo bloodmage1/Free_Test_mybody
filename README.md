@@ -2,7 +2,7 @@
 
 ## 1. 시연
 
-다음 사이트에서 https://github.com/weniv/project_sample_repo 해당 프로젝트의 기획서를 확인하실 수 있습니다.
+[다음 사이트](https://github.com/bloodmage1/Free_Test_mybody_proposal)에서 해당 프로젝트의 기획서를 확인하실 수 있습니다.
 
 <img src="https://github.com/bloodmage1/Free_Test_mybody/blob/main/Demons.gif"/>
 
